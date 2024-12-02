@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000; /* Set background color to black */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .user-info {
+            position: absolute;
+            top: 10px; /* Positions the div 10px from the top */
+            left: 20px; /* Positions the div 20px from the left */
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #fdfdfd; /* Neon blue for "tech" look */
+            backdrop-filter: blur(5px);
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 2rem auto;
+            text-align: center;
+            color: #00e5ff; /* Neon blue for main text color */
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #00e5ff;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .option {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: #00e5ff; /* Neon blue for tech look */
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .option:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(57, 248, 9, 0.758);
+            background-color: rgba(208, 255, 0, 0.587);
+             /* Change background color on hover */
+        }
+        .user-info .user-icon {
+    width: 40px; /* Size of the image */
+    height: 40px;
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 10px; /* Space between the image and the text */
+    object-fit: cover; /* Ensures the image fits the circle */
+}
+
+/* The base style for the button */
+        .navigate-button {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            color: white;
+            border-radius: 15px;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: #00e5ff; /* Neon blue for tech look */
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            width: 100%; /* Make sure it stretches to the full width */
+            cursor: pointer; /* Make sure the cursor shows a pointer on hover */
+        }
+
+        /* Hover effect */
+        .navigate-button:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(57, 248, 9, 0.758);
+            background-color: rgba(208, 255, 0, 0.587); /* Change background on hover */
+        }
+
+
+
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #00e5ff; /* Neon blue */
+            transition: color 0.3s ease;
+        }
+
+        .option:hover .icon {
+            color: #00b3cc; /* Darker tech blue on hover */
+        }
+
+        .option-title {
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Color accents for each option */
+        .option:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .option:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <!-- User Info Section -->
+    <div class="user-info">
+    <div class="user-icon">
+        <img src="Y.jpg" alt="User Icon" class="user-icon">
+    </div>
+        <p>User:Sunitha</p>
+        <p>ID:sunithaCSE009</p>
+    </div>
+
+    <!-- Main Dashboard Container -->
+    <div class="container">
+        <h1 class="title">Finance Manager Dashboard</h1>
+        <div class="grid">
+            <div class="option">
+                <div class="icon">💵</div>
+                <a href="transaction.html" class="navigate-button">Pay</a>
+            </div>
+            <div class="option">
+                <div class="icon">⚙️</div>
+                <p class="option-title">Modify Transaction Limit</p>
+            </div>
+            <div class="option">
+                <div class="icon">🏦</div>
+                <p class="option-title">Add Funds to Savings Goal</p>
+            </div>
+            <div class="option">
+                <div class="icon">⏰</div>
+                <p class="option-title">Set and Track Reminders</p>
+            </div>
+            <div class="option">
+                <div class="icon">📊</div>
+                <p class="option-title">View Financial Health Tracker</p>
+            </div>
+            <div class="option">
+                <div class="icon">💳</div>
+                <p class="option-title">Check Current Balance</p>
+            </div>
+            <div class="option">
+                <div class="icon">📈</div>
+                <p class="option-title">Visualize Daily & Weekly Expenses</p>
+            </div>
+            <div class="option">
+                <div class="icon">👥</div>
+                <p class="option-title">Group Expense Sharing</p>
+            </div>
+            <div class="option">
+                <div class="icon">🔄</div>
+                <p class="option-title">Manage Subscriptions</p>
+            </div>
+            <div class="option">
+                <div class="icon">📉</div>
+                <p class="option-title">Price Drop Alerts</p>
+            </div>
+            <div class="option">
+                <div class="icon">😊</div>
+                <p class="option-title">Mood-Based Planning</p>
+            </div>
+            <div class="option">
+                <div class="icon">🌍</div>
+                <p class="option-title">Eco-Savings Tracker</p>
+            </div>
+            <div class="option">
+                <div class="icon">💡</div>
+                <p class="option-title">Micro-Investment Tips</p>
+            </div>
+            <div class="option">
+                <div class="icon">📂</div>
+                <p class="option-title">Goal-Oriented Expense Buckets</p>
+            </div>
+            <div class="option">
+                <div class="icon">🔍</div>
+                <p class="option-title">Insights Dashboard</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
